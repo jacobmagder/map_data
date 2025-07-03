@@ -1,0 +1,67 @@
+The Geographic Names Server
+User Guide
+
+Search for any name, any feature, anywhere (just not the U.S. or Antarctica)
+
+The Geographic Names Server (GNS) Home Page
+
+Before entering the GNS site, the user must first agree to the Terms of Service by clicking the blue "AGREE" button at the bottom of the page. The welcome page also specifies that the GNS does not include domestic or Antarctic names. There is an external link to the USGS, where users can find these names. 
+
+Once the user clicks "AGREE" they are taken to the GNS Home Page, shown in Figure 2. This page contains an overview of the information offered by GNS. Text at the top of the page shows when the database was last updated, when it will next be updated, the total number of features and names (some features have multiple names) and the current metadata standards. This page also contains external links to the USGS for US and Antarctic names. Additionally, the bottom of the home page contains external links to various US Government and international resources. The home page can be navigated through the expandable navigation menu on the left side of the screen, and other pages on the GNS website are located at the main menu on the top of the page. To search the entire GNS website, including the Home page, use the search bar on the top right.  Next to the search bar is the Language dropdown, which will translate any page in the GNS to the selected language. The GNS can be translated to Arabic, French, Russian, Spanish, and Chinese. Note that country names will not be translated, and instead will remain in the English which comes from the GNDB data.
+Perhaps the most important feature of the GNS homepage is the link to the Geographic Names Search Application. Clicking the blue button opens the app so that a user may search the GeoNames Database. Documentation for this app can be found by clicking on the "?" button in the top right corner of the app home screen. Below the GNS Search Application link is a link to the GNS Downloadable files. More about this page can be found in the "Pre-positioned Downloadable Country Files" section of this document.
+At the bottom of every page on the GNS site, there are several links to third party sources that may be useful to GNS users, as well as a privacy policy. These links are accessible in SC and TC environments. Contact information for the NGA, also listed at the bottom of every page, is SBU only. In NC, the banner identifies the GNS website as "An official website of the United States government." 
+GNS Services
+
+Figure 3 shows the Services page of the GNS. Navigation of this page is similar to the Home page described earlier in this document, however the contents are focused on various GNS tools. The following sections focus on tools detailed on the Services page. 
+Searchable GNS Codes
+
+The Searchable GNS Codes tool allows users to search certain attributes in the GNS Database. First, click on a button on the left side of the screen to select the attribute to query. Once a code has been selected, a search field appears to their right. To execute the search, use the blue button under the text boxes or press "Enter." Leave both text boxes blank to generate a list of all values. If no records are returned by a search, the message "NO "[GNS Code]" records found." Will display in the table.
+
+Generic Term Glossary
+The generic term is the descriptive portion of a full name that references a common, often geomorphologic, feature such as Cerro (mountain), Arroyo (river), or Golfo (gulf). For example, in the geographic name "Golfo de Tehuantepec," Golfo would be the generic term. Generic terms for names are collected in the GNS data and can be used to create generic term glossaries for cartographic products or other purposes. To being building a Generic Term Glossary, click the blue button labelled "Generic Term Glossary" near the bottom of the tool description. After the button is clicked, the user can selected up to 10 countries for which to build a generic term glossary. The glossary can either be viewed as an HTML file, or be downloaded as a csv file. 
+
+Pre-positioned Downloadable Country Files
+Click "Visit GNS Data Page" to open the Data page in a new tab. The pre-positioned downloadable country files page provides ready-to-download zipped folders for every country in the data base, as well as several thematic feature classes. Each zipped folder contains feature class files, a generic term glossary for features included in that country, and a disclaimer for how the data are to be used. For every feature class published on this page, there is an RSS link for that feature class. RSS links can be copied and added to a mail application such as Outlook so that the user can be notified every time that specific feature class is updated. The data page also tracks history of updated files and downloads. Click "History" on the top menu of the Data page shows daily runs, run type, and which files have been updated.
+Converting Country Files to GIS-readable Format
+The country files can be converted to a UTF-8 CSV file that can be imported into GIS programs such as ArcGIS Pro. To do so:
+1. Open Excel
+2. From the File Menu / Ribbon Tab, select Open
+3. Select the Browse button to open the familiar file opening dialog:
+4. Unless your settings have changed or you saved the country data file elsewhere, navigate to the Downloads folder. You will need to indicate that the file type is not the default Excel Workbook (.xlsx) but a Text File. Choose the appropriate item from the lengthy selection list. At this point you will see the extracted .txt file.
+5. The import wizard will prompt you for some information, like whether the columns are determined by a delimiter (tab, comma, etc.) or a fixed width (e.g., 10 spaces between each value on a line). The file will be tab delimited, so select Delimited and check the Tab checkbox.
+6. Next, save the file as a .csv file. In the file dialog, make sure to select CSV UTF-8 (Comma delimited) from the now-familiar selection list
+
+Opening in ArcGIS Pro
+1. Open the ArcGIS Pro project, expand the home folder under Folders in the Catalog  panel, and verify the csv file is displayed (you may need to right-click the home folder and select Refresh from the contextual menu to get it to display).
+2. Right-click the csv file, select Export from the contextual menu, and then select Table to Point Feature Class to open the conversion tool.
+3. Verify the parameters are correct (long_dd & lat_dd should be the X and Y fields, unless you have changed them), name the output table (or decide that the default is satisfactory), and select Run
+4. The table will appear in the project’s home workspace, which will have a home symbol next to it in the Catalog pane, and appear in the map.
+
+REST / JSON Services
+These links provide access to the REST Services Directory. To copy these links, click the clipboard icon to the right of the links to copy, and then paste them into another browser tab or window. To go directly to the link, click the arrow icon to the right of the link (the link will open in a new tab). These links take the user to the ArcGIS REST Services Directory. More information on ArcGIS REST Services can be found here. 
+
+Web Map Service and Web Feature Service
+To copy these links, click the clipboard icon to the right of the links to copy, and then paste them into another browser tab or window. The map service is the way that you make maps available to the web using ArcGIS. You'll make the map in ArcMap, then publish the map as a service to your ArcGIS Server site. Internet or intranet users can then use the map service in web applications, ArcGIS Desktop, ArcGIS Online, and other client applications. More information about map services can be found here, and more information about feature services can be found here.
+
+KML Streaming Services
+The KML Streaming Service link generates custom KML files based on the output of GIS_OUTPUT table. Using this link, the user can name the document and generate the KML file. The GIS_OUTPUT table is currently the only layer that can be added to this KML file. Users can also control how layers are displayed in the KML output; layers can be either vectors or images. 
+
+GNS Reference
+Country Codes
+Codes for geopolitical entities used in the GNS are based on the Geopolitical Entities, Names, and Codes (GENC) Standard, the U.S. Government profile of ISO 3166 "Codes for the representation of names of countries and their subdivisions." GENC provides a list of the basic geopolitical entities in the world, together with the administrative subdivisions that comprise each entity. A crosswalk workbook of GEC codes to GENC codes is available for GENC ED3U17.
+
+Foreign Names Committee (FNC)
+The GNS Database is the official repository of foreign place-name decisions approved by the US Board of Geographic Names. FNC meeting minutes and meeting agenda can be found on the GNS Reference page. Users may access the dropdown menu and select the meeting to view meeting minutes. Policies developed by the FNC are also available on the Reference page. 
+
+The Advisory Committee on Undersea Features (ACUF) Name Proposal Form
+The Advisory Committee on Undersea Features (ACUF) welcomes proposals for new undersea feature names. Forms to submit a new name are available on the GNS "References" page in a variety of formats: Excel, PDF, and online form. To fill out the online form, enter the proposed name, location, and whether the feature is in the ocean or sea. Then, continue to step through the form to provide additional information. To submit this form, a "point" feature is required, while lines and polygons are optional. Note that the location for the proposed feature should be entered in decimal degrees, and the minimum depth of the feature may not exceed the maximum depth. Users may also attach a file to this form, or indicate that the supporting file(s) exceed size requirements. In this case, NGA may reach out for further communication. In the "Location" tab of the form, users can see on a map where their proposed feature is located with other undersea features. Note that the "Show Location on Map" dialog may be slow to load, depending on the network from which it is accessed. Location must be specified in decimal degrees. Users may convert degrees, minutes, and seconds into decimal degrees using the converter in the "Location" tab of the form. Users may type a visual or audio CAPTCHA to submit.
+
+GNS Help
+Help Videos
+The "Quick Help" section of the GNS contains a link to how-to videos for using the GNS search application including Fuzzy Search, the ACUF name proposal form, and the GNS Regional Keyboard. These screen recording videos provide a more interactive instruction on how to use these features.
+
+Data Correction and Contact Form
+In the "Help" section of the GNS, there is a Data Correction Form near the bottom of the screen. Should users notice a problem with the data, this form can be used to bring the problem to the attention of the GeoNames team. Users may include supplemental files as attachments when they submit this form. The file size limit for this form is 50MB, and cannot be an executable file such as .exe. Should the user provide a file attachment with the data correction form, they will receive an email to the location of their attachment. 
+
+The GNS Search Bar
+The search bar appears on all pages in the top right corner. Entering text in the search bar highlights all instances of the word in the website, and displays relevant files than can be accessed directly from the search results window. To close the search and start a new one, the text from the first search must be cleared from the search bar before a new one can be entered. 
